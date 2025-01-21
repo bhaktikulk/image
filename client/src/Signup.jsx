@@ -185,7 +185,7 @@ function Signup() {
 
     // Send data to the backend
     axios
-      .post("http://localhost:3001/", formData, {
+      .post("https://image-woad-nu.vercel.app/", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
