@@ -13,6 +13,7 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
+            .post("http://localhost:3001/login", { email, password })
             .post("https://image-woad-nu.vercel.app/login", { email, password })
             .then((result) => {
                 if (result.data.message === "Success") {
@@ -28,7 +29,6 @@ function Login() {
             });
 
     };
-    
 
     return (
         <div style={styles.container}>
